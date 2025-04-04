@@ -8,7 +8,13 @@ const resolvers = require('./graphql/resolvers');
 
 async function startServer() {
   const app = express();
-  app.use(cors());
+  app.use(cors({
+    origin: [
+      'https://one01424929-comp3133-assignment2.onrender.com',
+      'http://localhost:4200' // Keep for local development
+    ],
+    credentials: true 
+  }));
   
   // Connect to MongoDB
   try {
@@ -33,11 +39,4 @@ async function startServer() {
   });
 }
 
-const cors = require('cors');
-app.use(cors({
-  origin: [
-    'https://one01424929-comp3133-assignment2.onrender.com',
-    'http://localhost:4200' // Keep for local development
-  ]
-}));
 startServer();
