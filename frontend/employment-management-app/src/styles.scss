@@ -1,0 +1,14 @@
+/* Remove these lines */
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Add this instead */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Your existing styles */
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}

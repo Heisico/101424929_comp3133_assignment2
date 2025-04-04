@@ -1,0 +1,9 @@
+<mat-toolbar color="primary" *ngIf="authService.isAuthenticated() && !isLoginPage() && !isSignupPage()">
+  <span>Employment Management App</span>
+  <span class="spacer"></span>
+  <button mat-button (click)="logout()">Logout</button>
+</mat-toolbar>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
